@@ -1,0 +1,18 @@
+# 머티리얼 에셋만 git에 남깁니다.
+# 모델, 텍스처, 애니메이션, 레벨, 블루프린트, 플러그인은 올라가지 않습니다.
+
+# 1) 프로젝트 루트는 전부 무시
+/*
+!/.gitignore
+
+# 2) Content 폴더만 열고, 그 안의 파일은 전부 무시
+!/Content/
+/Content/**
+!/Content/**/
+
+# 3) 머티리얼 이름 규칙에 맞는 파일만 다시 포함
+#    M_ 머티리얼, MM_ 마스터 머티리얼, MI_ 인스턴스, PP_ 포스트 프로세스
+!/Content/**/M_*.uasset
+!/Content/**/MM_*.uasset
+!/Content/**/MI_*.uasset
+!/Content/**/PP_*.uasset
